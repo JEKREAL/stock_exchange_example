@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Exchange</title>
+    <link rel="shortcut icon" type="image/jpg" href="../images/shark.jpeg" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="../CSS/styles.css">
+    <link rel="stylesheet" href="../CSS/marquee.css">
+
+
+</head>
+
+<body>
+    <div class="marquee" id="marquee">
+    </div>
+    <div class="container mt-5 shadow-lg p-5 bg-white rounded">
+        <h2 class="mb-4 text-center display-4"> Search Nasdaq Stocks</h2>
+        <form class="form-inline" id="form"></form>
+        <div class="form-inline" id="results"></div>
+    </div>
+    <script type ="module">
+        
+    </script>
+    <script src="../JS/marquee.js"></script>
+    <script src="../JS/SearchForm.js"></script>
+    <script src="../JS/SearchResults.js"></script>
+    <script>
+        (async function () {
+            const marquee = new Marquee(document.getElementById("marquee"));
+            marquee.addtoMarq1()
+            const searchF = new SearchForm(document.getElementById("form"));
+            const searchR = new SearchResults(document.getElementById("results"))
+            searchF.createElements()
+            searchF.onlickEvent()
+            searchR.responseFromNasdaq()
+            searchF.searchBar()
+        })()
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
+    integrity= 
+"sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww=="
+    crossorigin="anonymous"> 
+</script> 
+
+
+</body>
+
+</html>

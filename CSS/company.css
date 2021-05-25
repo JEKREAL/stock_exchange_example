@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    height: 140px;
+}
+
+#compLink {
+    color: brown;
+}
+
+#compImage {
+    width: auto;
+    height: auto;
+}
+
+#compDesc {
+    text-indent: 2em;
+    width: 1300px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+    height: 140px;
+}
+
+.cont {
+    display: flex;
+    justify-content: center;
+}
+
+#stockPrice {
+    width: 700px;
+    padding-left: 200px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 24px;
+}
+
+#changes {
+    margin-top: -40px;
+    padding-left: 390px;
+    font-family: Open Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 24px;
+}
+
+#hide-loader {
+    display: none;
+}

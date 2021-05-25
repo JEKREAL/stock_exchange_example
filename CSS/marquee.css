@@ -1,0 +1,31 @@
+.marquee {
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.marquee div {
+  display: inline-block;
+  width: max-content;
+  will-change: transform;
+  animation: marquee 2500s linear infinite;
+}
+
+.marquee div:hover {
+  animation-play-state: paused
+}
+
+.price {
+  display: inline-block;
+  width: max-content;
+  color: green;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
